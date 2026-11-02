@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from "next/link";
 
 export const StyledMain = styled.div`
 
@@ -346,3 +347,34 @@ export const ErrorStyling = styled.div`
     font-size: calc(8px + 1.2vw);
     
 `
+
+export const HeaderStyling = styled.header`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+`;
+
+export const StyledH2 = styled.h2`
+    font-size: 225%;
+    font-weight: 600;
+    padding: 1%;
+`;
+
+export const Nav = styled.nav`
+    padding: 0.5%;
+    margin: 1%;
+    width: 50%;
+    text-align: right;
+`;
+
+export const NavLink = styled(Link)`
+    padding: 1%;
+    margin: 1%;
+    font-size: 125%;
+    font-weight: 500;
+
+    &:hover {
+        text-decoration: underline;
+    }
+`;
