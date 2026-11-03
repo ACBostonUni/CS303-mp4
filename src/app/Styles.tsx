@@ -265,7 +265,7 @@ export const FlightDataElement = styled.div`
     border: transparent;
     border-radius: 20px;
     height: 90%;
-    width: 45%;
+    width: 47%;
     margin: auto;
     padding: 2%;
     
