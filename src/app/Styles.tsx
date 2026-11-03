@@ -255,7 +255,7 @@ export const AirportName = styled.p`
 export const DataText= styled.p`
     
     font-family: Tahoma, sans-serif;
-    font-size: calc(5px + 1.2vw);
+    font-size: calc(6px + 1.2vw);
     margin: 1% 0;
 `
 
