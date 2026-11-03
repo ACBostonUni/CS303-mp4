@@ -26,58 +26,62 @@ import FlightDataComp from "../Components/FlightDataComp";
 
 // Call An fetch API when I have the Params to call it, If params correctly entered call anf fetch function which will pass in Params
 
-// Pass the data off to another complnet
+// Pass the data off to another component
 
 // Return element after I fetch it
 
-// I need something to make sure that someone had selected a airline and ebters in text
+// I need something to make sure that someone had selected an airline and enters in text
 
 import type {FlightInterface} from "@/types";
 
 export default function Track() {
 // Use a button div to select the Airline, Lets just use Southwest, American, and Delta for now
-    // Button will change the airline. We need to filter
+    // Button will change the airline we need to filter by
 
     const [selectedIata, setSelectedIata] = useState('');
     const [flightNumber, setFlightNumber] = useState('');
     const [departure, setDeparture] = useState('');
     const[arrival, setArrival] = useState('');
 
-    const [flightData, setFlightData] = useState<FlightInterface | null>(null);
+    const [flightData, setFlightData] = useState<FlightInterface | null>(null); // The flight interface useState set by the Checker and then the value is passed to the FlightDataComp
 
-    const [error, setError] = useState("");
+    const [error, setError] = useState(""); // Used to keep track if someone didn't enter the fields right, or if There is nothing to return from the API
+                                                            // (Usually populated fields but nothing corresponding to that combination)
 
     async function fetchData(AirlineIata: string, FlightNumber: string, DepartCity: string, ArrivalCity: string) {
         const rawData = await fetch(
             `/api/fetchData?airlineIata=${AirlineIata}&flightNumber=${FlightNumber}&departureCity=${DepartCity}&arrivalCity=${ArrivalCity}`
-        );
+        ); // grab the raw data
 
-        const responseText = await rawData.text();
+        const responseText = await rawData.text(); // text for the console.log
 
-        console.log("API Response:", responseText);
+        console.log("API Response:", responseText); // Helpful Console.log
 
         if (!rawData.ok) {
             throw new Error("An error occurred while fetching data");
         }
         const response = JSON.parse(responseText);
+        // I am doing it this way because if I did rawData.json then my data length checker would not work properly
+        // This is because response.json would return a promise type, which I am not able to use in the code below .
+        // I don't need anything async because the responseText is already populated at this point. We already have the API response
+        // No Async is needed here. The opposite is needed really, because I need to immidiately parse the JSON, so I can do the checks below.
 
         const flight: FlightInterface | null =
-            response.data.length > 1 // I am doing this becasue sometimes in the morning the flight tracker
+            response.data.length > 1 // I am doing this because sometimes in the morning the flight tracker
                                     // returns 2 elements for the same flight number, dest iata, and arrival iata.
-                                    // Crazy right? So this one takes the most current one. If one one returned (take that one)
+                                    // Crazy right? So this one takes the most current one. If only one returned (take that one)
                 ? response.data[1] ?? null
                 : response.data[0] ?? null;
-        // The ?? Is used for if the response data is null, then we dont panic we just assign to null
+        // The ?? Is used for if the response data is null, then we don't panic we just assign null
 
         return flight;
     }
 
 
-    // The purpose of this is to be set by the Checker so that way the rawData can be passed to the Flight Data component
 
     async function CheckerFunction(AirlineIata:string, FlightNumber: string, departure: string ,arrival: string)
     {
-        if(AirlineIata == '' || FlightNumber == '' || departure == '' || arrival == ''){
+        if(AirlineIata == '' || FlightNumber == '' || departure == '' || arrival == ''){ // Check if any fields left blank
 
             setError("It seems you have not filled in all fields, try again after filling out all fields. Make sure to select an airline.")
             // Then We can not go through with the request
