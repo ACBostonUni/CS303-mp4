@@ -38,7 +38,7 @@ export default function Home() {
           </StyledSubHeading>
 
           <StyledSubHeading>
-              Use the 3 letter Airport IATA for Depature and Arrival
+              Use the 3 letter Airport IATA for Depature and Arrival. They must be in all caps.
           </StyledSubHeading>
 
           <StyledSubHeading>
