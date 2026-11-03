@@ -96,13 +96,14 @@ export const StyledHeading = styled.h2`
     margin: 2% 3%;
     font-weight: bold;
     font-size: calc(10px + 2vw);
+    color: #171717;
 `
 
 export const StyledAirlineText = styled.p`
 
     font-size: calc(7px + 1.1vw);
     font-family: "Arial Narrow", Helvetica, sans-serif;
-
+    color: #171717;
 
     @media screen and (max-width: 800px) {
         font-size: calc(8px + 1.7vw);
@@ -123,6 +124,7 @@ export const StyledInput = styled.input`
     border: #36a2ef 6px solid;
     border-radius: 10px;
     background-color: white;
+    color: #171717;
 
     @media screen and (max-width: 800px) {
         margin-bottom: 3%;
@@ -156,7 +158,7 @@ export const StyledSubHeadingForNumberInput = styled.h3`
     margin: 5% auto 5% auto;
     font-family: "Tahoma", Playbill, sans-serif;
     font-size: calc(8px + 1.3vw);
-
+    color: #171717;
     @media screen and (max-width: 800px) {
         margin: 2% auto;
     }
@@ -215,7 +217,7 @@ export const FlightDataDiv = styled.div`
     margin: 2% auto;
     height: 100%;
     padding: 2%;
-
+    
 `
 
 export const AirlineName = styled.h3`
@@ -234,6 +236,7 @@ export const IataText = styled.p`
     font-size: calc(17px + 1.2vw);
     margin: auto;
     width: 100%;
+    color: #171717;
 
 `
 
@@ -243,12 +246,14 @@ export const FlightDate = styled.p`
     font-weight: bold;
     margin: auto;
     width: 100%;
+    color: #171717;
 
 `
 
 export const AirportName = styled.p`
  font-family: Arial, Helvetica, sans-serif;
     font-size: calc(9px + 1.2vw);
+    color: #171717;
     
 `
 
@@ -257,6 +262,7 @@ export const DataText= styled.p`
     font-family: Tahoma, sans-serif;
     font-size: calc(6px + 1.2vw);
     margin: 1% 0;
+    color: #171717;
 `
 
 export const FlightDataElement = styled.div`
@@ -268,6 +274,7 @@ export const FlightDataElement = styled.div`
     width: 47%;
     margin: auto;
     padding: 2%;
+    color: #171717;
     
 `
 
@@ -362,6 +369,7 @@ export const HelpfulTipsDiv = styled.div`
     width: 70%;
     margin: 4% auto;
     padding: 2%;
+    color: #171717;
 
 
 `
