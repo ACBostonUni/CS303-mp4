@@ -25,6 +25,9 @@ export default function Home() {
 
         </StyledSubHeading>
 
+        <StyledSubHeading>
+
+        </StyledSubHeading>
 
           <StyledSubHeading>
               Helpful Tips:
