@@ -31,7 +31,7 @@ export default function FlightDataComp({ data }: { data: FlightInterface}){
 
                     <FlightDataElement>
                         <AirportName>{data.departure.airport}</AirportName>
-                        <DataText>Terminal: {data.departure.terminal ?? "No Terminal Specified"}</DataText>
+                        <DataText>Terminal: {data.departure.terminal ?? "Not Specified"}</DataText>
                         <DataText>Gate: {data.departure.gate ?? "No Gate Specified"}</DataText>
                         <DataText>Scheduled Departure: {data.departure.scheduled.slice(11,16) ?? "Scheduled Time N/A"} </DataText>
                         <DataText>Estimated Departure: {data.departure.estimated?.slice(11,16) ?? "Not Determined"} </DataText>
@@ -40,7 +40,7 @@ export default function FlightDataComp({ data }: { data: FlightInterface}){
 
                     <FlightDataElement>
                         <AirportName>{data.arrival.airport}</AirportName>
-                        <DataText>Terminal: {data.arrival.terminal ?? "No Terminal Specified"}</DataText>
+                        <DataText>Terminal: {data.arrival.terminal ?? "Not Specified"}</DataText>
                         <DataText>Gate: {data.arrival.gate ?? "No Gate Specified"}</DataText>
                         <DataText>Scheduled Arrival: {data.arrival.scheduled.slice(11,16) ?? "Scheduled Time N/A"} </DataText>
                         <DataText>Estimated Arrival: {data.arrival.estimated?.slice(11,16) ?? "Not Determined"} </DataText>
