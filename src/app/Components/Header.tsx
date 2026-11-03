@@ -5,7 +5,9 @@ const HeaderStyling = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10%;
+    height: 20%;
+    background: linear-gradient(to bottom, rgb(126 219 255 / 0.79)20%, #e5f1ff 85%, white 100%);
+   
 `;
 
 const StyledH2 = styled.h2`
@@ -31,6 +33,7 @@ const NavLink = styled(Link)`
     padding: 1%;
     margin: 1%;
     font-size: 125%;
+    font-weight: bold;
     
 
     @media screen and (max-width: 800px) {

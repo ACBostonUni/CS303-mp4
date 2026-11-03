@@ -1,4 +1,4 @@
-import {StyledHeading, StyledMain, StyledPlaneImage, StyledSubHeading} from "@/app/Styles";
+import {HelpfulTipsDiv, StyledHeading, StyledMain, StyledPlaneImage, StyledSubHeading} from "@/app/Styles";
 import PlaneImage from "@/Assets/images (2).png"
 export default function Home() {
   return (
@@ -25,16 +25,16 @@ export default function Home() {
 
         </StyledSubHeading>
 
-        <StyledSubHeading>
 
-        </StyledSubHeading>
 
+
+          <HelpfulTipsDiv>
           <StyledSubHeading>
               Helpful Tips:
           </StyledSubHeading>
 
           <StyledSubHeading>
-              Make sure you don't forget to select an airline using the logo buttons!
+              Make sure you do not forget to select an airline using the logo buttons!
           </StyledSubHeading>
 
           <StyledSubHeading>
@@ -42,9 +42,9 @@ export default function Home() {
           </StyledSubHeading>
 
           <StyledSubHeading>
-              For the flight number include only numbers. (No #)
+              For the flight number, include only numbers. (No #)
           </StyledSubHeading>
-
+          </HelpfulTipsDiv>
       </StyledMain>
   );
 }

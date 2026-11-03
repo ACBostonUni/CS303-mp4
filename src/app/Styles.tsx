@@ -348,3 +348,16 @@ export const ErrorStyling = styled.div`
     
 `
 
+export const HelpfulTipsDiv = styled.div`
+    text-align: center;
+    background-color: rgb(198 235 255);
+    border: dodgerblue 10px solid;
+    border-radius: 20px;
+    height: 90%;
+    width: 70%;
+    margin: 4% auto;
+    padding: 2%;
+
+
+`
+
