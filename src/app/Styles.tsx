@@ -346,6 +346,11 @@ export const ErrorStyling = styled.div`
     font-family: Cambria, sans-serif;
     font-size: calc(8px + 1.2vw);
     
+    @media screen and (max-width: 800px) {
+        
+        width: 70%
+    }
+    
 `
 
 export const HelpfulTipsDiv = styled.div`
