@@ -14,7 +14,7 @@ import {
     StyledSubHeading,
     DeltaAirlinePicture,
     GetButton,
-    StyledInputDiv, StyledRowDivBlock, StyledSubHeadingForNumberInput, ErrorStyling
+    StyledInputDiv, StyledRowDivBlock, StyledSubHeadingForNumberInput, ErrorStyling, StyledSubHeading2
 } from "@/app/Styles";
 import SouthWestPhoto from "../../Assets/SWPhoto.png";
 import AmericanAirPhoto from "../../Assets/AAPhoto.png";
@@ -160,11 +160,11 @@ export default function Track() {
                 <StyledRowDiv>
 
                     <StyledInputDiv>
-                        <StyledSubHeading> Enter Departure City </StyledSubHeading>
+                        <StyledSubHeading2> Enter Departure City </StyledSubHeading2>
                         <StyledInput value ={departure} onChange={(event) => setDeparture(event.target.value)}/>
                     </StyledInputDiv>
                    <StyledInputDiv>
-                       <StyledSubHeading> Enter Arrival City </StyledSubHeading>
+                       <StyledSubHeading2> Enter Arrival City </StyledSubHeading2>
                        <StyledInput value ={arrival} onChange={(event) => setArrival(event.target.value)}/>
                    </StyledInputDiv>
 

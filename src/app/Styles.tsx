@@ -96,7 +96,7 @@ export const StyledHeading = styled.h2`
     margin: 2% 3%;
     font-weight: bold;
     font-size: calc(10px + 2vw);
-    color: #171717;
+   
 `
 
 export const StyledAirlineText = styled.p`
@@ -144,6 +144,16 @@ export const StyledInputForm = styled.form`
 `
 
 export const StyledSubHeading = styled.h3`
+
+    margin: 2% auto;
+    font-family: "Tahoma", Playbill, sans-serif;
+    font-size: calc(8px + 1.3vw);
+    
+    
+
+`
+
+export const StyledSubHeading2 = styled.h3`
 
     margin: 2% auto;
     font-family: "Tahoma", Playbill, sans-serif;
