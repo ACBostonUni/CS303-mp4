@@ -148,7 +148,7 @@ export const StyledSubHeading = styled.h3`
     margin: 2% auto;
     font-family: "Tahoma", Playbill, sans-serif;
     font-size: calc(8px + 1.3vw);
-
+    color: #171717;
     
 
 `
@@ -226,6 +226,7 @@ export const AirlineName = styled.h3`
     font-weight: bold;
     font-size: calc(13px + 1.2vw);
     margin: auto;
+    color: #171717;
 
 `
 
