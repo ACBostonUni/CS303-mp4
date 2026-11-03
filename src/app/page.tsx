@@ -17,6 +17,7 @@ export default function Home() {
               Simply click on an airline icon, enter in your flight number, and include the departure IATA and arrival IATA.
           </StyledSubHeading>
 
+
         <StyledSubHeading>
 
             Go over to the Track A Flight page when you are ready!
@@ -24,6 +25,22 @@ export default function Home() {
 
         </StyledSubHeading>
 
+
+          <StyledSubHeading>
+              Helpful Tips:
+          </StyledSubHeading>
+
+          <StyledSubHeading>
+              Make sure you don't forget to select an airline using the logo buttons!
+          </StyledSubHeading>
+
+          <StyledSubHeading>
+              Use the 3 letter Airport IATA for Depature and Arrival
+          </StyledSubHeading>
+
+          <StyledSubHeading>
+              For the flight number include only numbers. (No #)
+          </StyledSubHeading>
 
       </StyledMain>
   );
