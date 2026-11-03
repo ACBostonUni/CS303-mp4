@@ -12,6 +12,12 @@ const StyledH2 = styled.h2`
     font-size: 225%;
     font-weight: 600;
     padding: 1%;
+    
+    @media screen and (max-width: 800px) {
+        
+        font-size: 150%;
+        
+    }
 `;
 
 const Nav = styled.nav`
@@ -25,7 +31,13 @@ const NavLink = styled(Link)`
     padding: 1%;
     margin: 1%;
     font-size: 125%;
-    font-weight: 500;
+    
+
+    @media screen and (max-width: 800px) {
+
+        font-size: 100%;
+
+    }
 
     &:hover {
         text-decoration: underline;
