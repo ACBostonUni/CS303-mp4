@@ -67,12 +67,13 @@ export default function Track() {
         // No Async is needed here. The opposite is needed really, because I need to immidiately parse the JSON, so I can do the checks below.
 
         const flight: FlightInterface | null =
-            response.data.length > 1 // I am doing this because sometimes in the morning the flight tracker
-                                    // returns 2 elements for the same flight number, dest iata, and arrival iata.
-                                    // Crazy right? So this one takes the most current one. If only one returned (take that one)
-                ? response.data[1] ?? null
-                : response.data[0] ?? null;
-        // The ?? Is used for if the response data is null, then we don't panic we just assign null
+            response.data[response.data.length-1] ?? null
+            // The ?? Is used for if the response data is null, then we don't panic we just assign null
+        // I am doing this because a data array is returned and sometimes in the morning the flight tracker
+        // returns 2 elements for the same flight number, dest iata, and arrival iata.
+        // Crazy right? So this one takes the most current one (The one that is the newest added (highest index))
+
+
 
         return flight;
     }
